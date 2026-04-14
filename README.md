@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# next-auctores-fe
 
-## Getting Started
+Frontend web app for Auctores, built with Next.js (App Router). The current implementation is a single-page landing experience with multiple sections and reusable UI primitives.
 
-First, run the development server:
+## Features
+
+- Single-page layout with sections: Hero, About, Our Work, Get Involved, and Contact.
+- Reusable UI components in `src/components/ui` (`Button`, `Card`, `Input`, `Textarea`).
+- Tailwind CSS styling with custom colors defined in `tailwind.config.ts`.
+- SVG illustrations served from `public/`.
+- `@vercel/speed-insights` integrated in the root layout.
+
+## Tech Stack
+
+- Next.js 14 (App Router)
+- React 18 + TypeScript
+- Tailwind CSS
+- shadcn/ui-style component setup (`components.json`)
+- Lucide React icons
+- ESLint (`next/core-web-vitals`)
+
+## Setup and Run
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run in development mode:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build for production:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Start production server:
 
-## Learn More
+```bash
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+Run lint:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project also includes `bun.lockb`, so you can use Bun if preferred.
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+next-auctores-fe/
+├─ public/
+│  ├─ undraw_about_us_page.svg
+│  └─ undraw_programming.svg
+├─ src/
+│  ├─ app/
+│  │  ├─ favicon.ico
+│  │  ├─ globals.css
+│  │  ├─ layout.tsx
+│  │  └─ page.tsx
+│  ├─ components/
+│  │  └─ ui/
+│  │     ├─ button.tsx
+│  │     ├─ card.tsx
+│  │     ├─ input.tsx
+│  │     └─ textarea.tsx
+│  └─ lib/
+│     └─ utils.ts
+├─ components.json
+├─ tailwind.config.ts
+└─ package.json
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+No license file is currently present in this repository.
